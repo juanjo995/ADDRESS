@@ -1,0 +1,63 @@
+cmake_minimum_required(VERSION 3.5)
+project(ADDRESS)
+
+set(CMAKE_CXX_STANDARD 17)
+
+# Realease
+set(CMAKE_BUILD_TYPE Release)
+set(CMAKE_CXX_FLAGS_DEBUG "-g")
+set(CMAKE_CXX_FLAGS_RELEASE "-O3")
+
+include_directories(include)
+
+# Sources
+set(SOURCES
+        src/main.cpp
+        src/ShaderProgram.cpp
+        src/Renderer.cpp
+        src/VAO.cpp
+        src/Camera.cpp
+        src/Star.cpp
+        src/Star.h
+        src/Grid.cpp
+        src/Grid.h
+        src/Axis.cpp
+        src/Axis.h
+        src/GUI.cpp
+        src/GUI.h
+        src/Utils.h
+        src/Utils.cpp
+        src/StarCatalog.cpp
+        src/StarCatalog.h
+        src/Parameters.h)
+
+# If we are on Linux
+if(UNIX AND NOT APPLE)
+set(OpenDialog
+        src/OpenFileDialogLINUX.h
+        src/OpenFileDialogLINUX.cpp)
+# If we are on Windows
+elseif(WIN32)
+set(OpenDialog
+        src/OpenFileDialogWINDOWS.h
+        src/OpenFileDialogWINDOWS.cpp)
+endif()
+
+set(LINK_LIBRARIES glad glfw imgui CCfits cfitsio)
+add_subdirectory(include/imgui)
+add_subdirectory(include/glad)
+add_subdirectory(glfw-3.3.2)
+
+#include_directories(/path/to/CCfits)
+
+#include_directories(/path/to/cfitsio)
+#link_directories(/path/to/cfitsio/lib)
+
+set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
+set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+
+add_executable(ADDRESS ${SOURCES} ${OpenDialog})
+
+# Link libraries
+target_link_libraries(ADDRESS ${LINK_LIBRARIES})
