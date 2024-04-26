@@ -8,6 +8,9 @@ With ADDRESS you can load and visualize stars datasets from [GEDR3](https://gea.
 
 <img src="https://user-images.githubusercontent.com/97818552/150414454-452813d0-25c2-46af-ae39-d63be63dd39b.gif" width="512" height="384">
 
+<img src="https://user-images.githubusercontent.com/97818552/150414454-452813d0-25c2-46af-ae39-d63be63dd39b.gif" width="512" height="384">
+![select_star](https://github.com/juanjo995/ADDRESS/assets/97818552/ba4f19cb-bb70-4f85-a6b6-c22a2cb0015e)
+
 
 This project relies on a few libraries to work
 
