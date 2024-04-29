@@ -60,7 +60,7 @@ If you dont have it you can install it with the next command
 
 Now we need the **zlib** compression library, we can install it with this command
 
-`sudo apt install zlib1g-dev`
+`sudo apt-get install zlib1g-dev`
 
 Now download and uncompress the **cfitsio** tar.gz file, you can download it from here
 
