@@ -36,13 +36,13 @@ Visualize the movement of the stars
 
 <img src="https://github.com/juanjo995/ADDRESS/assets/97818552/496e90de-9e78-4d32-ba4e-d1e643c8a9d8.gif" width="512" height="384">
 
-This project relies on a few libraries to work
+<br>This project relies on a few libraries to work
 
 **Glad** to initialize **OpenGL**\
 **GLFW** to manage the window creation and events\
 **ImGui** to build the user interface\
 **glm** to deal with different math operations\
-**CCfits** and **cfitsio** to load datasets in FITS format
+**CCfits** and **cfitsio** to load datasets in **FITS** format
 
 ## Installing cfitsio and CCfits
 
