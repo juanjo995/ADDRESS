@@ -100,7 +100,7 @@ We now run the `updatedb` command to update these new libraries
 
 ## Run on Linux
 
-Once you installed **cfitsio** and **CCfits** you can just download and run the executable
+Once you installed **cfitsio** and **CCfits** you can just [download](https://github.com/juanjo995/ADDRESS/releases/tag/Executable) and run the executable
 
 Make sure it can be executed
 
