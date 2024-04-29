@@ -48,10 +48,8 @@ add_subdirectory(include/imgui)
 add_subdirectory(include/glad)
 add_subdirectory(glfw-3.3.2)
 
-#include_directories(/path/to/CCfits)
-
-#include_directories(/path/to/cfitsio)
-#link_directories(/path/to/cfitsio/lib)
+#Path to CCfits
+include_directories(/usr/local/include/CCfits)
 
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
