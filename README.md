@@ -139,3 +139,35 @@ This will generate the **ADDRESS** executable file, make sure that you execute i
 `cd ..`
 
 `./build/ADDRESS`
+
+## Downloading datasets from Gaia archive
+
+![gaia](https://github.com/juanjo995/ADDRESS/assets/97818552/8a35cdc7-38a5-4448-9dfd-ec4bbd7ec368)
+
+We can access to the Gaia archive through the next link
+
+https://gea.esac.esa.int/archive/
+
+![interface](https://github.com/juanjo995/ADDRESS/assets/97818552/c63da13e-1eaa-496e-817e-92715f8a0e20)
+
+In the **Search in** dropdown we must select **gaiaedr3.gaia_source** (do not confuse with gaiadr3.gaia_source)
+
+In the section **Extra conditions** we can add as many conditions as we want
+
+In the section **Display columns** we must select at least the next atributes:
+* ra
+* dec
+* parallax
+* pmra
+* pmdec
+* phot_g_mean_mag
+* bp_g
+* dr2_radial_velocity
+
+The section **Advanced (ADQL)** shows us the specific query that was generated, we can modify it or make some changes like ordering by random index which will make the generated dataset statitically representative of the entire catalog
+
+![query](https://github.com/juanjo995/ADDRESS/assets/97818552/80ac5dd2-c425-4132-ab31-6ad109b63cb8)
+
+Once the query is ready we can click on **Submit Query**, wait for the output and download the result in **CSV** (plain text) or **FITS** (binary) format
+
+If you use this site without being registered the maximum number of stars in the output dataset is limited to 3 million, you'll need to create an account and log in to download larger datasets
