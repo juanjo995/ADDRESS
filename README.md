@@ -8,31 +8,31 @@ With **ADDRESS** you can load and visualize stars datasets from **Gaia's** [GEDR
 
 <img src="https://user-images.githubusercontent.com/97818552/150414454-452813d0-25c2-46af-ae39-d63be63dd39b.gif" width="768" height="576">
 
-Explore the stars
+<br>Explore the stars
 
 <img src="https://github.com/juanjo995/ADDRESS/assets/97818552/ba4f19cb-bb70-4f85-a6b6-c22a2cb0015e.gif" width="512" height="384">
 
-Colorize the catalog
+<br>Colorize the catalog
 
 <img src="https://github.com/juanjo995/ADDRESS/assets/97818552/69fef033-04b2-43e0-8076-706798379ae5.gif" width="512" height="384">
 
-Explore a 3D representation of the catalog
+<br>Explore a 3D representation of the catalog
 
 <img src="https://github.com/juanjo995/ADDRESS/assets/97818552/e9e3faa6-ff65-4ca8-afbd-cb82345e679d.gif" width="512" height="384">
 
-Explore the catalog in 2D
+<br>Explore the catalog in 2D
 
 <img src="https://github.com/juanjo995/ADDRESS/assets/97818552/cfc0e9a0-0946-48a0-9151-2a94054a880d.gif" width="512" height="384">
 
-Travel
+<br>Travel
 
 <img src="https://github.com/juanjo995/ADDRESS/assets/97818552/86dd1a6c-a88d-44fa-b885-12f31fde1c6e.gif" width="512" height="384">
 
-Visualize the HR Diagram
+<br>Visualize the HR Diagram
 
 <img src="https://github.com/juanjo995/ADDRESS/assets/97818552/042252d0-60f2-4fed-ae55-c493364729e3.gif" width="512" height="384">
 
-Visualize the movement of the stars
+<br>Visualize the movement of the stars
 
 <img src="https://github.com/juanjo995/ADDRESS/assets/97818552/496e90de-9e78-4d32-ba4e-d1e643c8a9d8.gif" width="512" height="384">
 
@@ -44,7 +44,7 @@ Visualize the movement of the stars
 **glm** to deal with different math operations\
 **CCfits** and **cfitsio** to load datasets in **FITS** format
 
-## Installing cfitsio and CCfits
+## Installing cfitsio and CCfits on Linux
 
 We'll need these two libraries in order to run or compile this project
 
