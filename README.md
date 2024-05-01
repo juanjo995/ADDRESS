@@ -2,7 +2,7 @@
 
 ## Astronomical Database Display and Representation Simple Software
 
-**ADDRESS** is a desktop application able to run on **Linux** systems.\
+**ADDRESS** is a desktop application able to run on both **Windows** and **Linux** systems.\
 It is written in **C++** and uses **OpenGL** for graphics.\
 With **ADDRESS** you can load and visualize stars datasets from **Gaia's** [GEDR3](https://gea.esac.esa.int/archive/)
 
@@ -100,7 +100,7 @@ We now run the `updatedb` command to update these new libraries
 
 ## Run on Linux
 
-Once you installed **cfitsio** and **CCfits** you can just [download](https://github.com/juanjo995/ADDRESS/releases/tag/Executable) and run the executable
+Once you installed **cfitsio** and **CCfits** you can just [download](https://github.com/juanjo995/ADDRESS/releases/tag/Executable) the **Linux** version, unzip the file and run the executable **ADDRESS**
 
 Make sure it can be executed
 
@@ -139,6 +139,10 @@ This will generate the **ADDRESS** executable file, make sure that you execute i
 `cd ..`
 
 `./build/ADDRESS`
+
+## Run on Windows
+
+Just [download](https://github.com/juanjo995/ADDRESS/releases/tag/Executable) the **Windows** version, unzip the file and run the executable **ADDRESS.exe**
 
 ## Downloading datasets from Gaia archive
 
