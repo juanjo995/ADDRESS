@@ -2,7 +2,7 @@
 
 ## Astronomical Database Display and Representation Simple Software
 
-**ADDRESS** is a desktop application able to run on both **Windows** and **Linux** systems.\
+**ADDRESS** is a desktop application able to run on **Linux** systems.\
 It is written in **C++** and uses **OpenGL** for graphics.\
 With **ADDRESS** you can load and visualize stars datasets from **Gaia's** [GEDR3](https://gea.esac.esa.int/archive/)
 
