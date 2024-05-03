@@ -398,7 +398,7 @@ StarCatalog::loadGEDR3(std::string filePath, LoadOptions guiOptions) {
     // FITS LOAD
     else if(fileExtension == "fits") {
 
-        std::auto_ptr<CCfits::FITS> input_file(new CCfits::FITS(filePath,CCfits::Read));
+        CCfits::FITS* input_file(new CCfits::FITS(filePath,CCfits::Read));
         CCfits::ExtHDU& table = input_file->extension("votable");
 
         std::vector<std::string> params;
@@ -1279,7 +1279,7 @@ StarCatalog::saveToFITSFile(std::string path) {
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 
-    std::auto_ptr<CCfits::FITS> output_file(0);
+    CCfits::FITS* output_file(0);
 
     try {
         // Check if file alredy exits and delete it
@@ -1291,7 +1291,11 @@ StarCatalog::saveToFITSFile(std::string path) {
             remove(path.c_str());
         }
 
-        output_file.reset(new CCfits::FITS(path, CCfits::Write));
+        #ifdef __linux__
+            output_file.reset(new CCfits::FITS(path, CCfits::Write));
+        #elif _WIN32
+            output_file->resetPosition();
+        #endif
     }
     catch (CCfits::FITS::CantOpen) {
         std::cout << "Error: Could not save FITS file.\n";
