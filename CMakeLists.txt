@@ -51,6 +51,13 @@ add_subdirectory(glfw-3.3.2)
 #Path to CCfits
 include_directories(/usr/local/include/CCfits)
 
+#Paths to CCfits and cfitsio on Windows
+include_directories("C:/Program Files (x86)/CCfits/include")
+include_directories("C:/Program Files (x86)/CCfits/include/CCfits")
+include_directories("C:/Program Files (x86)/CFITSIO/include")
+link_directories("C:/Program Files (x86)/CCfits/lib")
+link_directories("C:/Program Files (x86)/CFITSIO/lib")
+
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
