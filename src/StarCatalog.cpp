@@ -1292,7 +1292,7 @@ StarCatalog::saveToFITSFile(std::string path) {
         }
 
         #ifdef __linux__
-            output_file.reset(new CCfits::FITS(path, CCfits::Write));
+            output_file->reset(new CCfits::FITS(path, CCfits::Write));
         #elif _WIN32
             output_file->resetPosition();
         #endif
