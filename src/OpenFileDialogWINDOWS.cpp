@@ -24,7 +24,7 @@ std::string openFileDialog() {
 }
 
 // Returns an empty string if dialog is canceled
-std::string saveFileDialog() {
+std::string saveFileDialog(std::string extension) {
 
     OPENFILENAME ofn;
     char fileName[MAX_PATH] = "newStarCatalog.csv";
