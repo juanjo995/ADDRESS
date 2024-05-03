@@ -366,7 +366,7 @@ Renderer::prepareScene() {
 
     // CAT2
     newCat = new StarCatalog();
-    newCat->loadGEDR3("datasets/KnownRV500K.csv", lo);
+    newCat->loadGEDR3("datasets/KnownRV500K.fits", lo);
     newCat->setCustomColor(glm::vec4(0.0f, 1.0f, 0.0f, 1.0f)); // GREEN
     catalogs->push_back(newCat);
 
