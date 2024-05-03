@@ -3,6 +3,7 @@
 
 #include <cstdio>
 #include <vector>
+#include <array>
 
 #include <glm/gtc/random.hpp>
 
