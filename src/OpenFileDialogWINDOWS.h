@@ -9,6 +9,6 @@
 std::string openFileDialog();
 
 // Returns an empty string if dialog is canceled
-std::string saveFileDialog();
+std::string saveFileDialog(std::string extension);
 
 #endif //OPENFILEDIALOGWINDOWS_H
