@@ -100,7 +100,7 @@ We now run the `updatedb` command to update these new libraries
 
 ## Run on Linux
 
-Once you installed **cfitsio** and **CCfits** you can just [download](https://github.com/juanjo995/ADDRESS/releases/tag/Executable) the **Linux** version, unzip the file and run the executable **ADDRESS**
+Once you installed **cfitsio** and **CCfits** you can just [download](https://github.com/juanjo995/ADDRESS/releases/tag/Executable) the **ADDRESS.zip**, unzip the file and run the executable **ADDRESS**
 
 Make sure it can be executed
 
@@ -142,7 +142,7 @@ This will generate the **ADDRESS** executable file, make sure that you execute i
 
 ## Run on Windows
 
-Just [download](https://github.com/juanjo995/ADDRESS/releases/tag/Executable) the **Windows** version, unzip the file and run the executable **ADDRESS.exe**
+Just [download](https://github.com/juanjo995/ADDRESS/releases/tag/Executable) the **ADDRESS.zip**, unzip the file and run the executable **ADDRESS.exe**
 
 ## Downloading datasets from Gaia archive
 
