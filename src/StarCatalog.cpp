@@ -1290,12 +1290,7 @@ StarCatalog::saveToFITSFile(std::string path) {
             file.close();
             remove(path.c_str());
         }
-
-        #ifdef __linux__
-            //output_file->reset(new CCfits::FITS(path, CCfits::Write));
-        #elif _WIN32
-            output_file->resetPosition();
-        #endif
+        output_file = new CCfits::FITS(path, CCfits::Write);
     }
     catch (CCfits::FITS::CantOpen) {
         std::cout << "Error: Could not save FITS file.\n";
