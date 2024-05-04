@@ -243,7 +243,7 @@ Now run cmake.
 
 Then we build it.
 
-`cmake --build . --config Release`
+`cmake --build . --config Release --target ALL_BUILD -j 8 --`
 
 This shall generate the **ADDRESS.exe** file inside the `/build/Release` folder. Copy this file to the path containing de shaders and datasets folder and execute it.
 
