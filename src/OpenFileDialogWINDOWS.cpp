@@ -27,7 +27,14 @@ std::string openFileDialog() {
 std::string saveFileDialog(std::string extension) {
 
     OPENFILENAME ofn;
-    char fileName[MAX_PATH] = "newStarCatalog.csv";
+    char fileNameCSV[MAX_PATH] = "newStarCatalog.csv";
+    char fileNameFITS[MAX_PATH] = "newStarCatalog.fits";
+    char* fileName;
+    if(extension == "csv"){
+        fileName = fileNameCSV;
+    } else if (extension == "fits") {
+        fileName = fileNameFITS;
+    }
     ZeroMemory(&ofn, sizeof(ofn));
 
     ofn.lStructSize = sizeof(OPENFILENAME);
