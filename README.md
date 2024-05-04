@@ -4,7 +4,7 @@
 
 **ADDRESS** is a desktop application able to run on both **Windows** and **Linux** systems.\
 It is written in **C++** and uses **OpenGL** for graphics.\
-With **ADDRESS** you can load and visualize stars datasets from **Gaia's** [GEDR3](https://gea.esac.esa.int/archive/).
+With **ADDRESS** you can load and visualize star datasets from **Gaia's** [GEDR3](https://gea.esac.esa.int/archive/).
 
 <img src="https://user-images.githubusercontent.com/97818552/150414454-452813d0-25c2-46af-ae39-d63be63dd39b.gif" width="768" height="576">
 
