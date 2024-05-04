@@ -6,35 +6,35 @@
 It is written in **C++** and uses **OpenGL** for graphics.\
 With **ADDRESS** you can load and visualize stars datasets from **Gaia's** [GEDR3](https://gea.esac.esa.int/archive/).
 
-<img src="https://user-images.githubusercontent.com/97818552/150414454-452813d0-25c2-46af-ae39-d63be63dd39b.gif" width="768" height="576">
+<img src="https://user-images.githubusercontent.com/97818552/150414454-452813d0-25c2-46af-ae39-d63be63dd39b.gif" width="922" height="720">
 
 <br>Explore the stars
 
-<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/ba4f19cb-bb70-4f85-a6b6-c22a2cb0015e.gif" width="512" height="384">
+<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/5cdb0de1-4590-41cc-b914-3d40963ae347.gif" width="922" height="720">
 
 <br>Colorize the catalog
 
-<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/69fef033-04b2-43e0-8076-706798379ae5.gif" width="512" height="384">
+<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/870d3bc2-d517-45b6-aa99-e48adbe89582.gif" width="922" height="720">
 
 <br>Explore a 3D representation of the catalog
 
-<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/e9e3faa6-ff65-4ca8-afbd-cb82345e679d.gif" width="512" height="384">
+<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/37db8c54-3793-4e08-a4b1-7f026fa0a1e3.gif" width="922" height="720">
 
 <br>Explore the catalog in 2D
 
-<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/cfc0e9a0-0946-48a0-9151-2a94054a880d.gif" width="512" height="384">
+<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/52576a9f-0f37-4c1a-abd9-e187f89de041.gif" width="922" height="720">
 
 <br>Travel
 
-<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/86dd1a6c-a88d-44fa-b885-12f31fde1c6e.gif" width="512" height="384">
+<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/d73447d6-8006-4475-8d94-3a29bd89429c.gif" width="922" height="720">
 
 <br>Visualize the HR Diagram
 
-<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/042252d0-60f2-4fed-ae55-c493364729e3.gif" width="512" height="384">
+<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/24f356e0-0c5c-4708-b68b-6f83de0437b5.gif" width="922" height="720">
 
 <br>Visualize the movement of the stars
 
-<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/496e90de-9e78-4d32-ba4e-d1e643c8a9d8.gif" width="512" height="384">
+<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/016bfb0e-ed68-4216-b1a8-f6de6f368e08.gif" width="922" height="720">
 
 <br>This project relies on a few libraries to work:
 
