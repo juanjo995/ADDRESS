@@ -229,7 +229,7 @@ Run the next command specifying the path to **cfitsio** that should be `C:\Progr
 
 This shall install the library into `C:\Program Files (x86)\CCfits`
 
-### Building from source
+### Build from source
 
 Download the repository, enter in the folder and run:
 
