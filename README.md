@@ -245,7 +245,7 @@ Then we build it.
 
 `cmake --build . --config Release --target ALL_BUILD -j 8 --`
 
-This shall generate the **ADDRESS.exe** file inside the `/build/Release` folder. Copy this file to the path containing de shaders and datasets folder and execute it.
+This shall generate the **ADDRESS.exe** file inside the `/build/Release` folder. Copy this file to the path containing de shaders and datasets folder. You will also need to copy to this folder the **.dll** files **zlib.dll** and **cfitsio.dll** that should be inside `C:\Program Files (x86)\zlib\bin`and `C:\Program Files (x86)\CFITSIO\bin`
 
 ## Downloading datasets from Gaia archive
 
