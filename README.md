@@ -62,7 +62,7 @@ Now we need the **zlib** compression library, we can install it with this comman
 
 `sudo apt-get install zlib1g-dev`
 
-Now download and uncompress the **cfitsio** tar.gz file, you can download it from here:
+Now download and uncompress the **cfitsio** tar.gz file for Unix, you can download it from here:
 
 https://heasarc.gsfc.nasa.gov/fitsio/fitsio.html
 
