@@ -6,7 +6,6 @@ std::string openFileDialog() {
     std::string filePath = "";
 
     nfdchar_t *outPath;
-    nfdfilteritem_t filterItem[0];
     nfdresult_t result = NFD_OpenDialog(&outPath, NULL, 0, NULL);
     if (result == NFD_OKAY)
     {
@@ -35,7 +34,6 @@ std::string saveFileDialog(std::string extension) {
     std::string fileName = "newStarCatalog." + extension;
 
     nfdchar_t *outPath;
-    nfdfilteritem_t filterItem[0];
     nfdresult_t result = NFD_SaveDialog(&outPath, NULL, 0, NULL, fileName.c_str());
     if (result == NFD_OKAY)
     {
