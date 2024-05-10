@@ -29,21 +29,11 @@ set(SOURCES
         src/Utils.cpp
         src/StarCatalog.cpp
         src/StarCatalog.h
-        src/Parameters.h)
+        src/Parameters.h
+        src/FileDialog.h
+        src/FileDialog.cpp)
 
-# If we are on Linux
-if(UNIX AND NOT APPLE)
-set(OpenDialog
-        src/OpenFileDialogLINUX.h
-        src/OpenFileDialogLINUX.cpp)
-# If we are on Windows
-elseif(WIN32)
-set(OpenDialog
-        src/OpenFileDialogWINDOWS.h
-        src/OpenFileDialogWINDOWS.cpp)
-endif()
-
-set(LINK_LIBRARIES glad glfw imgui CCfits cfitsio)
+set(LINK_LIBRARIES glad glfw imgui CCfits cfitsio nfd)
 add_subdirectory(include/imgui)
 add_subdirectory(include/glad)
 add_subdirectory(glfw-3.3.2)
