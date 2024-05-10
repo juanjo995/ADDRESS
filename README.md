@@ -256,7 +256,7 @@ This shall generate the **ADDRESS.exe** file inside the `/build/Release` folder.
 
 We'll need these two libraries in order to run or compile this project.
 
-First we neeed the command line tools for Xcode, we can install them with the next command:
+First we neeed the **command line tools for Xcode**, we can install them with the next command:
 
 `xcode-select --install`
 
@@ -294,7 +294,7 @@ We need to use **cmake**, if you don't have it you can install it with the next 
 
 `brew install cmake`
 
-If you don't have brew you can install it by pasting the command from this page into a terminal:
+If you don't have **brew** you can install it by pasting the command from this page into a terminal:
 
 https://brew.sh/
 
