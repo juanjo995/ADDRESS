@@ -41,6 +41,7 @@ add_subdirectory(include/nativefiledialog-extended)
 
 #Path to CCfits
 include_directories(/usr/local/include/CCfits)
+include_directories(/usr/local/include)
 
 #Paths to CCfits and cfitsio on Windows
 include_directories("C:/Program Files (x86)/CCfits/include")
