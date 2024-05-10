@@ -50,6 +50,12 @@ include_directories("C:/Program Files (x86)/CFITSIO/include")
 link_directories("C:/Program Files (x86)/CCfits/lib")
 link_directories("C:/Program Files (x86)/CFITSIO/lib")
 
+#For CCfits on macOS
+link_directories(/usr/local/lib)
+
+#For glad library
+link_directories(./lib)
+
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
