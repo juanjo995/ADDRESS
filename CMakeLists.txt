@@ -53,9 +53,13 @@ link_directories("C:/Program Files (x86)/CFITSIO/lib")
 link_directories(/usr/local/lib)
 
 #For glad library
+if(UNIX AND NOT APPLE)
 link_directories(./libLinux)
+elseif(APPLE)
 link_directories(./libMacOS)
+elseif(WIN32)
 link_directories(./libWindows)
+endif()
 
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
