@@ -3,11 +3,7 @@
 
 #include <iostream>
 
-#ifdef __linux__
-#include "OpenFileDialogLINUX.h"
-#elif _WIN32
-#include "OpenFileDialogWINDOWS.h"
-#endif
+#include "FileDialog.h"
 
 #include <imgui/imgui.h>
 #include <imgui/imgui_internal.h>
