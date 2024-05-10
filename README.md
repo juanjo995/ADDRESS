@@ -183,7 +183,7 @@ This shall install the library into `C:\Program Files (x86)\zlib`
 
 ### Installing cfitsio
 
-Now download the **cfitsio** file for Windows:
+Now download the **cfitsio** zip file for Windows:
 
 http://heasarc.gsfc.nasa.gov/fitsio
 
