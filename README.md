@@ -121,7 +121,7 @@ We also need the RandR headers, we can get these headers with the next command:
 
 `sudo apt-get install xorg-dev`
 
-NFD library needs GTK, to install it we run the following command:
+Native File Dialog library needs GTK, to install it we run the following command:
 
 `sudo apt-get install build-essential libgtk-3-dev`
 
