@@ -37,6 +37,7 @@ set(LINK_LIBRARIES glad glfw imgui CCfits cfitsio nfd)
 add_subdirectory(include/imgui)
 add_subdirectory(include/glad)
 add_subdirectory(glfw-3.3.2)
+add_subdirectory(include/nativefiledialog-extended)
 
 #Path to CCfits
 include_directories(/usr/local/include/CCfits)
