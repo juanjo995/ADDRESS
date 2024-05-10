@@ -2,7 +2,7 @@
 
 ## Astronomical Database Display and Representation Simple Software
 
-**ADDRESS** is a desktop application able to run on both **Windows** and **Linux** systems.\
+**ADDRESS** is a desktop application able to run on **Windows**, **Linux** and **macOS** systems.\
 It is written in **C++** and uses **OpenGL** for graphics.\
 With **ADDRESS** you can load and visualize star datasets from **Gaia's** [GEDR3](https://gea.esac.esa.int/archive/).
 
@@ -38,11 +38,12 @@ With **ADDRESS** you can load and visualize star datasets from **Gaia's** [GEDR3
 
 <br>This project relies on a few libraries to work:
 
-* **Glad** to initialize **OpenGL**
-* **GLFW** to manage the window creation and events
-* **ImGui** to build the user interface
-* **glm** to deal with different math operations
-* **CCfits** and **cfitsio** to load datasets in **FITS** format
+* [**Glad**](https://github.com/Dav1dde/glad) to initialize **OpenGL**.
+* [**GLFW**](https://www.glfw.org/) to manage the window creation and events.
+* [**ImGui**](https://github.com/ocornut/imgui) to build the user interface.
+* [**glm**](https://github.com/g-truc/glm) to deal with different math operations.
+* [**CCfits**](https://heasarc.gsfc.nasa.gov/fitsio/CCfits/) and [**cfitsio**](https://heasarc.gsfc.nasa.gov/fitsio/fitsio.html) to load datasets in **FITS** format.
+* [**Native File Dialog**](https://github.com/btzy/nativefiledialog-extended) to pop up the open and save file dialog windows.
 
 # Instructions for Linux
 
@@ -120,9 +121,13 @@ We also need the RandR headers, we can get these headers with the next command:
 
 `sudo apt-get install xorg-dev`
 
+NFD library needs GTK, to install it we run the following command:
+
+`sudo apt-get install build-essential libgtk-3-dev`
+
 We need to use **cmake**, if you don't have it you can install it with the next command:
 
-`supo apt-get install cmake`
+`sudo apt-get install cmake`
 
 Now download the repository, enter in the folder and run:
 
@@ -246,6 +251,68 @@ Then we build it.
 `cmake --build . --config Release --target ALL_BUILD -j 8 --`
 
 This shall generate the **ADDRESS.exe** file inside the `/build/Release` folder. Copy this file to the path containing de shaders and datasets folder. You will also need to copy to this folder the **.dll** files **zlib.dll** and **cfitsio.dll** that should be inside `C:\Program Files (x86)\zlib\bin`and `C:\Program Files (x86)\CFITSIO\bin`
+
+# Instructions for macOS
+
+We'll need these two libraries in order to run or compile this project.
+
+First we neeed the command line tools for Xcode, we can install them with the next command:
+
+`xcode-select --install`
+
+### Installing cfitsio
+
+Download and uncompress the **cfitsio** tar.gz file for Unix, you can download it from here:
+
+https://heasarc.gsfc.nasa.gov/fitsio/fitsio.html
+
+Enter in the folder and execute the next commands:
+
+`./configure --prefix=/usr/local`
+
+`make`
+
+`sudo make install`
+
+### Installing CCfits
+
+Now download and uncompress the **CCfits** tar.gz file, you can download it from here:
+
+https://heasarc.gsfc.nasa.gov/fitsio/CCfits/
+
+Enter in the folder and execute the next commands:
+
+`./configure --prefix=/usr/local --with-cfitsio-include=/usr/local/include --with-cfitsio-libdir=/usr/local/lib`
+
+`make`
+
+`sudo make install`
+
+## Build from source on macOS
+
+We need to use **cmake**, if you don't have it you can install it with the next command:
+
+`brew install cmake`
+
+If you don't have brew you can install it by pasting the command from this page into a terminal:
+
+https://brew.sh/
+
+Now download the repository, enter in the folder and run:
+
+`mkdir build`
+
+`cd build`
+
+`cmake ..`
+
+`make`
+
+This will generate the **ADDRESS** executable file, make sure that you execute it from the same folder that contains the shaders and datasets folders.
+
+`cd ..`
+
+`./build/ADDRESS`
 
 ## Downloading datasets from Gaia archive
 
