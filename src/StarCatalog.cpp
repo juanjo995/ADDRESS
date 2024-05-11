@@ -109,9 +109,9 @@ StarCatalog::checkFirstCSVLine(std::string line) {
         return false;
     }
 
-    radialVelColumn = findColumn(splittedLine, "dr2_radial_velocity");
+    radialVelColumn = findColumn(splittedLine, "radial_velocity");
     if(radialVelColumn == -1) {
-        std::cout << "Error: dr2_radial_velocity column missing in csv file.\n";
+        std::cout << "Error: radial_velocity column missing in csv file.\n";
         return false;
     }
 
@@ -165,9 +165,9 @@ StarCatalog::checkFITSParams(std::vector<std::string> params) {
         return false;
     }
 
-    radialVelColumn = findColumn(params, "dr2_radial_velocity");
+    radialVelColumn = findColumn(params, "radial_velocity");
     if(radialVelColumn == -1) {
-        std::cout << "Error: dr2_radial_velocity column missing in fits file.\n";
+        std::cout << "Error: radial_velocity column missing in fits file.\n";
         return false;
     }
 
@@ -1166,7 +1166,7 @@ StarCatalog::saveToCSVFile(std::string path) {
     std::cout << "Saving CSV stars file...\n";
 
     std::string line;
-    line = "ra,dec,parallax,phot_g_mean_mag,bp_g,pmra,pmdec,dr2_radial_velocity\n";
+    line = "ra,dec,parallax,phot_g_mean_mag,bp_g,pmra,pmdec,radial_velocity\n";
 
     std::cout << path << "\n";
 
@@ -1309,7 +1309,7 @@ StarCatalog::saveToFITSFile(std::string path) {
     colName[4] = "bp_g";
     colName[5] = "pmra";
     colName[6] = "pmdec";
-    colName[7] = "dr2_radial_velocity";
+    colName[7] = "radial_velocity";
 
     std::string hduName = "votable";
     unsigned long rows = starsCount;

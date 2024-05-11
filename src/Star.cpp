@@ -307,7 +307,7 @@ Star::getInfoText() {
 
 std::string
 Star::getCSVLine() {
-    //"ra,dec,parallax,phot_g_mean_mag,bp_g,pmra,pmdec,dr2_radial_velocity\n";
+    //"ra,dec,parallax,phot_g_mean_mag,bp_g,pmra,pmdec,radial_velocity\n";
     glm::vec3 polarCoords = getPolarFromCartesian(position3D);
     polarCoords.x = glm::degrees(polarCoords.x);
     polarCoords.y = glm::degrees(polarCoords.y);

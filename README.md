@@ -336,7 +336,7 @@ In the section **Display columns** we must select at least the next atributes:
 * pmdec
 * phot_g_mean_mag
 * bp_g
-* dr2_radial_velocity
+* radial_velocity
 
 The section **Advanced (ADQL)** shows us the specific query that was generated, we can modify it or make some changes like ordering by random index which will make the generated dataset statitically representative of the entire catalog.
 
