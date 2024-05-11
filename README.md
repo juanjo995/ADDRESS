@@ -10,31 +10,27 @@ With **ADDRESS** you can load and visualize star datasets from **Gaia's** [DR3](
 
 <br>Explore the stars
 
-<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/5cdb0de1-4590-41cc-b914-3d40963ae347.gif" width="768" height="600">
-
-<br>Colorize the catalog
-
-<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/870d3bc2-d517-45b6-aa99-e48adbe89582.gif" width="768" height="600">
+<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/3c3783b2-8d88-4610-b39d-a1960fa10e89.gif" width="768" height="600">
 
 <br>Explore a 3D representation of the catalog
 
-<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/37db8c54-3793-4e08-a4b1-7f026fa0a1e3.gif" width="768" height="600">
+<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/daec0f64-c759-4c30-ac9b-d213a8676b32.gif" width="768" height="600">
 
 <br>Explore the catalog in 2D
 
-<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/52576a9f-0f37-4c1a-abd9-e187f89de041.gif" width="768" height="600">
+<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/8ca76fae-d693-4feb-a3b5-2e04a19719be.gif" width="768" height="600">
 
 <br>Travel
 
-<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/d73447d6-8006-4475-8d94-3a29bd89429c.gif" width="768" height="600">
+<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/5cdae0a3-9327-4369-83a7-a5f8baef76d9.gif" width="768" height="600">
 
 <br>Visualize the HR Diagram
 
-<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/24f356e0-0c5c-4708-b68b-6f83de0437b5.gif" width="768" height="600">
+<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/e8b78a3c-0e62-479c-993a-30573ca0c9c3.gif" width="768" height="600">
 
 <br>Visualize the movement of the stars
 
-<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/016bfb0e-ed68-4216-b1a8-f6de6f368e08.gif" width="768" height="600">
+<img src="https://github.com/juanjo995/ADDRESS/assets/97818552/6f8d2810-3929-4a1a-b691-d4d9e1212961.gif" width="768" height="600">
 
 <br>This project relies on a few libraries to work:
 
