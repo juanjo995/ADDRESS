@@ -175,7 +175,7 @@ StarCatalog::checkFITSParams(std::vector<std::string> params) {
 }
 
 bool
-StarCatalog::loadGEDR3(std::string filePath, LoadOptions guiOptions) {
+StarCatalog::loadGDR3(std::string filePath, LoadOptions guiOptions) {
 
     loadOptions = guiOptions;
 
@@ -264,7 +264,7 @@ StarCatalog::loadGEDR3(std::string filePath, LoadOptions guiOptions) {
 
         int nullsMagnitudes = 0;
 
-        std::cout << "Loading stars from GEDR3 dataset...\n";
+        std::cout << "Loading stars from GDR3 dataset...\n";
 
     // Check if file is CSV or FITS
     std::vector<std::string> splittedName = splitLine(sourceFileName, '.');

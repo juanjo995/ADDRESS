@@ -222,7 +222,7 @@ public:
     float& getLowerSpeedModuleFilter();
     float& getUpperSpeedModuleFilter();
 
-    bool loadGEDR3(std::string filePath, LoadOptions guiOptions);
+    bool loadGDR3(std::string filePath, LoadOptions guiOptions);
     void loadHYG(std::string filePath);
 
     void computeStats(stats& s);

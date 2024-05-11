@@ -380,7 +380,7 @@ GUI::draw() {
         if(ImGui::Button("Load###loadButton")) {
 
             StarCatalog* newCat = new StarCatalog();
-            if(newCat->loadGEDR3(loadingFilePath, guiLoadOptions)){
+            if(newCat->loadGDR3(loadingFilePath, guiLoadOptions)){
                 newCat->setCustomColor(glm::vec4(0.0f, 1.0f, 0.0f, 1.0f)); // GREEN
                 newCat->setCiAbsGraphShader(param->ciAbsGraphShader);
                 param->catalogs->push_back(newCat);
@@ -388,7 +388,7 @@ GUI::draw() {
                 updateCatalogsList();
                 param->activeCatalogInt = param->catalogs->size() - 1;
             } else {
-                std::cout << "Something went wrong while loading GEDR3 dataset.\n";
+                std::cout << "Something went wrong while loading GDR3 dataset.\n";
             }
             loadingFile = false;
         }
