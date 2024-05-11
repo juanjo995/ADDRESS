@@ -322,9 +322,9 @@ We can access to the Gaia archive through the next link:
 
 https://gea.esac.esa.int/archive/
 
-![interface](https://github.com/juanjo995/ADDRESS/assets/97818552/c63da13e-1eaa-496e-817e-92715f8a0e20)
+![interface](https://github.com/juanjo995/ADDRESS/assets/97818552/a1b63b12-3fa2-4f07-b2b7-fa10c2f0bafe)
 
-In the **Search in** dropdown we must select **gaiaedr3.gaia_source** (do not confuse with gaiadr3.gaia_source).
+In the **Search in** dropdown we must select **gaiadr3.gaia_source**.
 
 In the section **Extra conditions** we can add as many conditions as we want.
 
@@ -340,7 +340,7 @@ In the section **Display columns** we must select at least the next atributes:
 
 The section **Advanced (ADQL)** shows us the specific query that was generated, we can modify it or make some changes like ordering by random index which will make the generated dataset statitically representative of the entire catalog.
 
-![query](https://github.com/juanjo995/ADDRESS/assets/97818552/80ac5dd2-c425-4132-ab31-6ad109b63cb8)
+![query](https://github.com/juanjo995/ADDRESS/assets/97818552/26dc8967-40c4-43f1-84c5-90344469582e)
 
 Once the query is ready we can click on **Submit Query**, wait for the output and download the result in **CSV** (plain text) or **FITS** (binary) format.
 
