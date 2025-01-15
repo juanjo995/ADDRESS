@@ -310,7 +310,7 @@ This will generate the **ADDRESS** executable file, make sure that you execute i
 
 `./build/ADDRESS`
 
-## Downloading datasets from Gaia archive
+# Downloading datasets from Gaia archive
 
 ![gaia](https://github.com/juanjo995/ADDRESS/assets/97818552/8a35cdc7-38a5-4448-9dfd-ec4bbd7ec368)
 
