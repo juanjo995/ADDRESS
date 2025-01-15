@@ -252,7 +252,7 @@ This shall generate the **ADDRESS.exe** file inside the `/build/Release` folder.
 
 We'll need these two libraries in order to run or compile this project.
 
-First we neeed the **command line tools for Xcode**, we can install them with the next command:
+First we need the **command line tools for Xcode**, we can install them with the next command:
 
 `xcode-select --install`
 
