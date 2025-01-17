@@ -175,6 +175,9 @@ startGLFW(GLFWwindow* &window) {
     ImGui::CreateContext();
     ImGui_ImplGlfwGL3_Init(window, true);
 
+    ImGuiIO& io = ImGui::GetIO();
+    io.IniFilename = nullptr; // Disable saving/loading settings
+
     ImGui::GetStyle().Colors[ImGuiCol_SliderGrab] = ImVec4(0.42f, 0.67f, 1.0f, 0.6f);
     ImGui::GetStyle().Colors[ImGuiCol_SliderGrabActive] = ImVec4(0.0f, 0.7f, 1.0f, 1.0f);
     ImGui::GetStyle().Colors[ImGuiCol_Button] = ImVec4(0.42f, 0.67f, 1.0f, 0.6f);
