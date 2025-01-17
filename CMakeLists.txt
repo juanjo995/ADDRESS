@@ -59,6 +59,7 @@ elseif(APPLE)
 link_directories(./libMacOS)
 elseif(WIN32)
 link_directories(./libWindows)
+set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MD")
 endif()
 
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
