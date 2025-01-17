@@ -118,6 +118,8 @@ public:
 
 private:
 
+    std::string appDir;
+
     bool mode;
     Parameters param;
     bool clicked;
