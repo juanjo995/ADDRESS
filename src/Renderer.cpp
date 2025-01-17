@@ -1,5 +1,10 @@
 #include "Renderer.h"
 
+std::string getAppDir() {
+    const char* appDir = std::getenv("APPDIR");
+    return appDir ? std::string(appDir) : ".";
+}
+
 const char * GetGLErrorStr(GLenum err)
 {
     switch (err)
@@ -222,6 +227,8 @@ Renderer::Renderer() {
     param.haloOffset = 0.0f;
     param.haloSlope = 0.2f;
 
+    appDir = getAppDir() + "/";
+
 }
 
 Renderer::~Renderer() {
@@ -265,7 +272,7 @@ Renderer::prepareOpenGL() {
 void
 Renderer::prepareShaders() {
 
-    star3DShader.createShaderProgram("shaders/star3d");
+    star3DShader.createShaderProgram((appDir + "shaders/star3d").c_str());
     star3DShader.use();
     star3DShader.setUniform("sizeFactor", param.sizeFactor);
     star3DShader.setUniform("sizeOffset", param.sizeOffset);
@@ -280,7 +287,7 @@ Renderer::prepareShaders() {
     param.star3DShader = &star3DShader;
     param.currentShader = param.star3DShader;
 
-    plot2DShader.createShaderProgram("shaders/plot2D");
+    plot2DShader.createShaderProgram((appDir + "shaders/plot2D").c_str());
     plot2DShader.use();
     plot2DShader.setStarSoubroutinesIndexes();
     plot2DShader.setUniform("plot2DSizeFactor", param.plot2DSizeFactor);
@@ -299,7 +306,7 @@ Renderer::prepareShaders() {
     param.plot2DShader = &plot2DShader;
 
     // HR Diagram shader
-    diagramHRShader.createShaderProgram("shaders/diagramHR");
+    diagramHRShader.createShaderProgram((appDir + "shaders/diagramHR").c_str());
     diagramHRShader.use();
     diagramHRShader.setStarSoubroutinesIndexes();
     diagramHRShader.setUniform("diagramHRSizeFactor", param.diagramHRSizeFactor);
@@ -318,24 +325,24 @@ Renderer::prepareShaders() {
 
     param.diagramHRShader = &diagramHRShader;
 
-    scopeShader.createGeometryShaderProgram("shaders/scope");
+    scopeShader.createGeometryShaderProgram((appDir + "shaders/scope").c_str());
 
-    spaceVelocityShader.createGeometryShaderProgram("shaders/spaceVelocity");
+    spaceVelocityShader.createGeometryShaderProgram((appDir + "shaders/spaceVelocity").c_str());
 
-    mouseClickShader.createShaderProgram("shaders/mouseClick");
+    mouseClickShader.createShaderProgram((appDir + "shaders/mouseClick").c_str());
     mouseClickShader.use();
     mouseClickShader.setMouseClickSoubroutinesIndexes();
 
-    mouseClick2DShader.createShaderProgram("shaders/mouseClick2D");
+    mouseClick2DShader.createShaderProgram((appDir + "shaders/mouseClick2D").c_str());
     mouseClick2DShader.use();
     mouseClick2DShader.setMouseClickSoubroutinesIndexes();
 
-    mouseClickHRShader.createShaderProgram("shaders/mouseClickHR");
+    mouseClickHRShader.createShaderProgram((appDir + "shaders/mouseClickHR").c_str());
     mouseClickHRShader.use();
     mouseClickHRShader.setMouseClickSoubroutinesIndexes();
 
-    gridShader.createShaderProgram("shaders/grid");
-    axisShader.createShaderProgram("shaders/axis");
+    gridShader.createShaderProgram((appDir + "shaders/grid").c_str());
+    axisShader.createShaderProgram((appDir + "shaders/axis").c_str());
 
 }
 
@@ -358,7 +365,7 @@ Renderer::prepareScene() {
 
     // CAT1
     StarCatalog* newCat = new StarCatalog();
-    newCat->loadHYG("datasets/hygdata_v3.csv");
+    newCat->loadHYG((appDir + "datasets/hygdata_v3.csv").c_str());
     newCat->setCustomColor(glm::vec4(1.0f, 0.0f, 0.0f, 1.0f)); // RED
     catalogs->push_back(newCat);
 
@@ -366,7 +373,7 @@ Renderer::prepareScene() {
 
     // CAT2
     newCat = new StarCatalog();
-    newCat->loadGDR3("datasets/KnownRV500K.fits", lo);
+    newCat->loadGDR3((appDir + "datasets/KnownRV500K.fits").c_str(), lo);
     newCat->setCustomColor(glm::vec4(0.0f, 1.0f, 0.0f, 1.0f)); // GREEN
     catalogs->push_back(newCat);
 
