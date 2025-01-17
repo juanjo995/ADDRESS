@@ -2,7 +2,7 @@
 
 ## Astronomical Database Display and Representation Simple Software
 
-**ADDRESS** is a desktop application able to run on **Windows**, **Linux** and **MacOS** systems.\
+**ADDRESS** is a desktop application able to run on **Windows**, **Linux** and **macOS** systems.\
 It is written in **C++** and uses **OpenGL** for graphics.\
 With **ADDRESS** you can load and visualize star datasets from **Gaia's** [DR3](https://gea.esac.esa.int/archive/).
 
@@ -246,13 +246,13 @@ Then we build it.
 
 This shall generate the **ADDRESS.exe** file inside the `/build/Release` folder. Copy this file to the path containing de shaders and datasets folder. You will also need to copy to this folder the **.dll** files **zlib.dll** and **cfitsio.dll** that should be inside `C:\Program Files (x86)\zlib\bin`and `C:\Program Files (x86)\CFITSIO\bin`
 
-# Instructions for MacOS
+# Instructions for macOS
 
-## Run on MacOS
+## Run on macOS
 
 Just [download](https://github.com/juanjo995/ADDRESS/releases/tag/MacOS_Executable) the **ADDRESS.zip**, unzip the file and run the executable **ADDRESS.app**. The operating system maybe detect that the software is not from a trusted source, in that case you have to go to **System Preferences** → **Security & Privacy** and find the button **Open Anyway**.
 
-## Build from source on MacOS
+## Build from source on macOS
 
 We'll need these two libraries in order to run or compile this project.
 
