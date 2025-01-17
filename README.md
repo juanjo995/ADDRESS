@@ -2,7 +2,7 @@
 
 ## Astronomical Database Display and Representation Simple Software
 
-**ADDRESS** is a desktop application able to run on **Windows**, **Linux** and **macOS** systems.\
+**ADDRESS** is a desktop application able to run on **Windows**, **Linux** and **MacOS** systems.\
 It is written in **C++** and uses **OpenGL** for graphics.\
 With **ADDRESS** you can load and visualize star datasets from **Gaia's** [DR3](https://gea.esac.esa.int/archive/).
 
@@ -42,6 +42,16 @@ With **ADDRESS** you can load and visualize star datasets from **Gaia's** [DR3](
 * [**Native File Dialog**](https://github.com/btzy/nativefiledialog-extended) to pop up the open and save file dialog windows.
 
 # Instructions for Linux
+
+## Run on Linux
+
+Just [download](https://github.com/juanjo995/ADDRESS/releases/tag/Linux_Executable) the **ADDRESS.AppImage** file, make sure it has execution permissions (**right click** → **Properties** → **Allow executing file as program**) and double click to execute it, or:
+
+`chmod +x ADDRESS.AppImage`
+
+`./ADDRESS.AppImage`
+
+## Build from source on Linux
 
 We'll need these two libraries in order to run or compile this project.
 
@@ -95,19 +105,7 @@ We now run the `updatedb` command to update these new libraries.
 
 `sudo updatedb`
 
-## Run on Linux
-
-Once you installed **cfitsio** and **CCfits** you can just [download](https://github.com/juanjo995/ADDRESS/releases/tag/Executable) the **ADDRESS.zip**, unzip the file and run the executable **ADDRESS**.
-
-Make sure it can be executed.
-
-`chmod +x ADDRESS`
-
-Run it.
-
-`./ADDRESS`
-
-## Build from source on Linux
+### Build from source
 
 We must have **OpenGL** installed in our system, we can do it with the next command:
 
@@ -145,7 +143,7 @@ This will generate the **ADDRESS** executable file, make sure that you execute i
 
 ## Run on Windows
 
-Just [download](https://github.com/juanjo995/ADDRESS/releases/tag/Executable) the **ADDRESS.zip**, unzip the file and run the executable **ADDRESS.exe**.
+Just [download](https://github.com/juanjo995/ADDRESS/releases/tag/Windows_Executable) the **ADDRESS.zip**, unzip the file and run the executable **ADDRESS.exe**.
 
 ## Build from source on Windows
 
@@ -248,7 +246,13 @@ Then we build it.
 
 This shall generate the **ADDRESS.exe** file inside the `/build/Release` folder. Copy this file to the path containing de shaders and datasets folder. You will also need to copy to this folder the **.dll** files **zlib.dll** and **cfitsio.dll** that should be inside `C:\Program Files (x86)\zlib\bin`and `C:\Program Files (x86)\CFITSIO\bin`
 
-# Instructions for macOS
+# Instructions for MacOS
+
+## Run on MacOS
+
+Just [download](https://github.com/juanjo995/ADDRESS/releases/tag/MacOS_Executable) the **ADDRESS.zip**, unzip the file and run the executable **ADDRESS.app**. The operating system maybe detect that the software is not from a trusted source, in that case you have to go to **System Preferences** → **Security & Privacy** and find the button **Open Anyway**.
+
+## Build from source on MacOS
 
 We'll need these two libraries in order to run or compile this project.
 
@@ -284,7 +288,7 @@ Enter in the folder and execute the next commands:
 
 `sudo make install`
 
-## Build from source on macOS
+### Build from source
 
 We need to use **cmake**, if you don't have it you can install it with the next command:
 
@@ -341,3 +345,5 @@ The section **Advanced (ADQL)** shows us the specific query that was generated, 
 Once the query is ready we can click on **Submit Query**, wait for the output and download the result in **CSV** (plain text) or **FITS** (binary) format.
 
 If you use this site without being registered the maximum number of stars in the output dataset is limited to 3 million, you'll need to create an account and log in to download larger datasets.
+
+By default **ADDRESS** comes with two datasets, the [HYG](https://github.com/astronexus/HYG-Database) database which contains the brightest stars and the common name of some of them, and a dataset with ~500000 stars where radial velocity is known.
