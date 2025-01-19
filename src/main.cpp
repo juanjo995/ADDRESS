@@ -58,6 +58,9 @@ key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
             case GLFW_KEY_DOWN:
                 r -> wheelMove(false);
                 break;
+            case GLFW_KEY_F5:
+                r -> resetCameraPosition();
+                break;
 		}
 	}
 
