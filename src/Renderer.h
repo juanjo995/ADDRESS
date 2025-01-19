@@ -116,6 +116,8 @@ public:
     void setSubroutines();
     void setSubroutinesForMouseClickShader(ShaderProgram* sh);
 
+    void resetCameraPosition();
+
 private:
 
     std::string appDir;
