@@ -12,6 +12,7 @@
 #include <cmath>
 #include <vector>
 #include <string>
+#include <algorithm> // For std::replace
 
 class Star {
 
@@ -46,6 +47,9 @@ public:
     glm::vec3 getVelocityParams();
     std::string getInfoLine();
     std::string getInfoText();
+    void replace(std::string& s);
+    std::string doubleToString(double value);
+    std::string to_string2(float f);
     std::string getCSVLine();
 
     unsigned int id;        // 0
