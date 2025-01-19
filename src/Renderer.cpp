@@ -1481,3 +1481,10 @@ Renderer::setSubroutinesForMouseClickShader(ShaderProgram* sh) {
     sh->applyMouseClickSubroutines(sizeIndex);
 
 }
+
+void
+Renderer::resetCameraPosition() {
+    param.camera->setPosition(glm::vec3(0, 0, 0));
+    param.camera->setLookAt(0.0f, 0.0f);
+    param.orbitDistance = 1.0f;
+}
