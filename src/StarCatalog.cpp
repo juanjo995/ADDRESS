@@ -335,7 +335,7 @@ StarCatalog::loadGDR3(std::string filePath, LoadOptions guiOptions) {
                         dist = loadOptions.defaultDistance;
                     }
                 } else {
-                    if(stringToDouble(splittedLine[parallaxColumn]) <= 0.0d) {
+                    if(stringToDouble(splittedLine[parallaxColumn]) <= 0.0) {
                         if(loadOptions.discartParallax) {
                             discartEntry = true;
                         } else {
