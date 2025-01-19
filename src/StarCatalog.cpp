@@ -174,6 +174,24 @@ StarCatalog::checkFITSParams(std::vector<std::string> params) {
     return true;
 }
 
+bool checkColumnName(std::string name) {
+    return name == "ra" ||
+           name == "dec" ||
+           name == "parallax" ||
+           name == "phot_g_mean_mag" ||
+           name == "bp_g" ||
+           name == "pmra" ||
+           name == "pmdec" ||
+           name == "radial_velocity";
+}
+
+double stringToDouble(const std::string& str) {
+    std::stringstream ss(str);
+    double value;
+    ss >> value;
+    return value;
+}
+
 bool
 StarCatalog::loadGDR3(std::string filePath, LoadOptions guiOptions) {
 
@@ -300,13 +318,13 @@ StarCatalog::loadGDR3(std::string filePath, LoadOptions guiOptions) {
                 if(splittedLine[raColumn] == "") {
                     discartEntry = true;
                 } else {
-                    ra = glm::radians(std::stod(splittedLine[raColumn]));
+                    ra = glm::radians(stringToDouble(splittedLine[raColumn]));
                 }
 
                 if(splittedLine[decColumn] == "") {
                     discartEntry = true;
                 } else {
-                    dec = glm::radians(std::stod(splittedLine[decColumn]));
+                    dec = glm::radians(stringToDouble(splittedLine[decColumn]));
                 }
 
                 // Distance from parallax
@@ -317,14 +335,15 @@ StarCatalog::loadGDR3(std::string filePath, LoadOptions guiOptions) {
                         dist = loadOptions.defaultDistance;
                     }
                 } else {
-                    if(std::stof(splittedLine[parallaxColumn]) <= 0.0f) {
+                    if(stringToDouble(splittedLine[parallaxColumn]) <= 0.0d) {
                         if(loadOptions.discartParallax) {
                             discartEntry = true;
+                            std::cout << "discard\n";
                         } else {
                             dist = loadOptions.defaultDistance;
                         }
                     } else {
-                        dist = parallaxToDist(std::stof(splittedLine[parallaxColumn]));
+                        dist = parallaxToDist(stringToDouble(splittedLine[parallaxColumn]));
                     }
                 }
 
@@ -336,7 +355,7 @@ StarCatalog::loadGDR3(std::string filePath, LoadOptions guiOptions) {
                         ma = loadOptions.defaultAppMag;
                     }
                 } else {
-                    ma = std::stod(splittedLine[appMagColumn]);
+                    ma = stringToDouble(splittedLine[appMagColumn]);
                 }
 
                 glm::vec3 color;
@@ -349,7 +368,7 @@ StarCatalog::loadGDR3(std::string filePath, LoadOptions guiOptions) {
                         color = getColor(colorIndex, colorIndexTable);
                     }
                 } else {
-                    colorIndex = std::stof(splittedLine[colorIndexColumn]);
+                    colorIndex = stringToDouble(splittedLine[colorIndexColumn]);
                     color = getColor(colorIndex, colorIndexTable);
                 }
 
@@ -359,13 +378,13 @@ StarCatalog::loadGDR3(std::string filePath, LoadOptions guiOptions) {
 
                 //pmra
                 if(splittedLine[pmRaColumn] != "") {
-                    pmra = std::stof(splittedLine[pmRaColumn]);
+                    pmra = stringToDouble(splittedLine[pmRaColumn]);
                 }
                 if(splittedLine[pmDecColumn] != "") {
-                    pmdec = std::stof(splittedLine[pmDecColumn]);
+                    pmdec = stringToDouble(splittedLine[pmDecColumn]);
                 }
                 if(splittedLine[radialVelColumn] != "") {
-                    rVel = std::stof(splittedLine[radialVelColumn]);
+                    rVel = stringToDouble(splittedLine[radialVelColumn]);
                 }
 
                 Star s = Star(ra,
@@ -408,14 +427,15 @@ StarCatalog::loadGDR3(std::string filePath, LoadOptions guiOptions) {
 
         for(unsigned int i = 0; i < table.numCols(); ++i) {
             CCfits::Column& column = table.column(i + 1);
-            params.push_back(column.name());
-            values.push_back(std::valarray<float>());
-            column.read(values[i], 1, column.rows());
+            if(checkColumnName(column.name())) {
+                params.push_back(column.name());
+                values.push_back(std::valarray<float>());
+                column.read(values[i], 1, column.rows());
+            }
         }
 
         int rows = table.column(1).rows();
         int cols = table.numCols();
-
         input_file->destroy();
 
         // Check params in fits file
@@ -1186,6 +1206,7 @@ StarCatalog::saveToCSVFile(std::string path) {
                 star = ptr[i];
                 if(checkFilters(star)) {
                     file << star.getCSVLine();
+                    //std::cout << star.getCSVLine() << "\n";
                 }
             }
             // release pointer to mapped buffer after use
