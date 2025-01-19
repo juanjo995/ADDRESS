@@ -519,15 +519,16 @@ GUI::draw() {
 
                 if (ImGui::MenuItem("Close")) {
                     if (param->catalogs->size() != 0) {
+                        if(param->getActiveCatalog() != param->defaultCatalog) {
+                            if(param->getActiveCatalog() == param->defaultCatalog) {
+                                param->defaultCatalog = nullptr;
+                            }
 
-                        if(param->getActiveCatalog() == param->defaultCatalog) {
-                            param->defaultCatalog = nullptr;
+                            delete param->getActiveCatalog();
+                            param->catalogs->erase(param->catalogs->begin() + param->activeCatalogInt);
+                            param->activeCatalogInt = 0;
+                            updateCatalogsList();
                         }
-
-                        delete param->getActiveCatalog();
-                        param->catalogs->erase(param->catalogs->begin() + param->activeCatalogInt);
-                        param->activeCatalogInt = 0;
-                        updateCatalogsList();
                     }
                 }
                 ImGui::EndMenu();
