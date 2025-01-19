@@ -301,8 +301,23 @@ Star::getInfoText() {
             lines[10] + "\n\n" +
             lines[11] + "\n";
 
-    return text;
+}
 
+void
+Star::replace(std::string& s) {
+    std::replace(s.begin(), s.end(), ',', '.');
+}
+
+std::string
+Star::doubleToString(double value) {
+    std::ostringstream oss;
+    oss.precision(18);    // Set precision
+    oss << std::fixed;           // Use fixed-point notation
+    oss << value;
+    //return oss.str();
+    std::string str = oss.str();
+    replace(str); // Just to make sure the decimal separator is '.'
+    return str;
 }
 
 std::string
@@ -314,14 +329,14 @@ Star::getCSVLine() {
 
     glm::vec3 velParams = getVelocityParams();
 
-    return  std::to_string(polarCoords.x) + ',' +
-            std::to_string(polarCoords.y) + ',' +
-            std::to_string(getParallax()) + ',' +
-            std::to_string(getAppMag()) + ',' +
-            std::to_string(getColorIndex()) + ',' +
-            std::to_string(velParams.x) + ',' +
-            std::to_string(velParams.y) + ',' +
-            std::to_string(velParams.z) + '\n';
+    return  doubleToString(polarCoords.x) + ',' +
+            doubleToString(polarCoords.y) + ',' +
+            doubleToString(getParallax()) + ',' +
+            doubleToString(getAppMag()) + ',' +
+            doubleToString(getColorIndex()) + ',' +
+            doubleToString(velParams.x) + ',' +
+            doubleToString(velParams.y) + ',' +
+            doubleToString(velParams.z) + '\n';
 
 }
 
