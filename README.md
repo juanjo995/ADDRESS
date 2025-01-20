@@ -147,8 +147,6 @@ Just [download](https://github.com/juanjo995/ADDRESS/releases/tag/Windows_Execut
 
 ## Build from source on Windows
 
-### ccfits and cfitsio
-
 First make sure that you have:
 
 * **Microsoft Visual Studio** available from https://visualstudio.microsoft.com
