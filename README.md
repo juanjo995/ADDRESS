@@ -327,7 +327,7 @@ Next, we have a **Catalog** dropdown menu where you can view the current catalog
 
 We also have a **Show stats** button that displays the minimum, maximum, average, variance, and standard deviation of the main parameters in the current catalog.
 
-At the end of this section, we have the option to display star names from the default HYG catalog. This option has a significant impact on application performance and should only be used in **Centered on origin** camera mode.
+At the end of this section, we have the option to display star names from the default HYG catalog.
 
 ![2](https://github.com/user-attachments/assets/0a375ca1-0252-4232-9865-4867771a5cb6)
 
