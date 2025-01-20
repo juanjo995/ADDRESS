@@ -372,10 +372,10 @@ Renderer::prepareScene() {
     param.defaultCatalog = newCat;
 
     // CAT2
-    newCat = new StarCatalog();
-    newCat->loadGDR3((appDir + "datasets/KnownRV500K.fits").c_str(), lo);
-    newCat->setCustomColor(glm::vec4(0.0f, 1.0f, 0.0f, 1.0f)); // GREEN
-    catalogs->push_back(newCat);
+    //newCat = new StarCatalog();
+    //newCat->loadGDR3((appDir + "datasets/KnownRV500K.fits").c_str(), lo);
+    //newCat->setCustomColor(glm::vec4(0.0f, 1.0f, 0.0f, 1.0f)); // GREEN
+    //catalogs->push_back(newCat);
 
     param.catalogs = catalogs;
     param.activeCatalogInt = 0;
