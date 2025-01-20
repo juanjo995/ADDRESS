@@ -203,7 +203,11 @@ StarCatalog::loadGDR3(std::string filePath, LoadOptions guiOptions) {
     epochSpeedInt = 0;
 
     //set filename
-    std::vector<std::string> splittedPath = splitLine(filePath, '/');
+    #ifdef _WIN32
+        std::vector<std::string> splittedPath = splitLine(filePath, '\\');
+    #else
+        std::vector<std::string> splittedPath = splitLine(filePath, '/');
+    #endif
     sourceFileName = splittedPath[splittedPath.size() - 1];
     std::cout << "Source filename: " << sourceFileName << "\n";
 
