@@ -1486,5 +1486,13 @@ void
 Renderer::resetCameraPosition() {
     param.camera->setPosition(glm::vec3(0, 0, 0));
     param.camera->setLookAt(0.0f, 0.0f);
-    param.orbitDistance = 1.0f;
+    param.orbitDistance = 3.0f;
+    param.displayFOV = 60.0f;
+    param.fovChanged = true;
+    param.cameraSpeed = 10.0;
+    param.setViewMode(CENTERED_ON_ORIGIN);
+    param.displayRA = glm::radians(88.0f);
+    param.displayDec = glm::radians(-5.0f);
+    camera->setLookAtFromPolarCoords(param.displayRA, param.displayDec);
+    computeRaDecText();
 }
