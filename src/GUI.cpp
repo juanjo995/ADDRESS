@@ -517,6 +517,23 @@ GUI::draw() {
                     chooseFileFormat = true;
                 }
 
+                if (ImGui::MenuItem("Open Gaia Archive")) {
+                    std::string url = "https://gea.esac.esa.int/archive/";
+                    #ifdef _WIN32
+                        // Windows
+                        std::string command = "start " + url;
+                    #elif __APPLE__
+                        // macOS
+                        std::string command = "open " + url;
+                    #elif __linux__
+                        // Linux
+                        std::string command = "xdg-open " + url;
+                    #else
+                        throw std::runtime_error("Unsupported OS");
+                    #endif
+                        std::system(command.c_str());
+                }
+              
                 if (ImGui::MenuItem("Close")) {
                     if (param->catalogs->size() != 0) {
                         if(param->getActiveCatalog() != param->defaultCatalog) {
