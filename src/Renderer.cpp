@@ -365,7 +365,7 @@ Renderer::prepareScene() {
 
     // CAT1
     StarCatalog* newCat = new StarCatalog();
-    newCat->loadHYG((appDir + "datasets/hygdata_v3.csv").c_str());
+    newCat->loadHYG((appDir + "datasets/HYG.csv").c_str());
     newCat->setCustomColor(glm::vec4(1.0f, 0.0f, 0.0f, 1.0f)); // RED
     catalogs->push_back(newCat);
 
