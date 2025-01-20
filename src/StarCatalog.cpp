@@ -815,8 +815,12 @@ StarCatalog::loadHYG(std::string filePath) {
             while (std::getline(file, line)) {
                 std::vector<std::string> splittedLine = splitLine(line, ',');
 
+                if(splittedLine.size() == 8) { // Some lines have no color index value and the split function only return 8 values
+                    splittedLine.push_back("");
+                }
+
                 // Name variable
-                name = splittedLine[6];
+                name = splittedLine[0];
                 if(name == "") {
                     nameNULLS++;
                 } else {
@@ -825,69 +829,70 @@ StarCatalog::loadHYG(std::string filePath) {
                 }
 
                 // RA variable
-                if(splittedLine[7] == "") raNULLS++; else raNOTNULLS++;
-                ra = glm::radians(std::stod(splittedLine[7]) * 15.0);
+                if(splittedLine[1] == "") raNULLS++; else raNOTNULLS++;
+                ra = glm::radians(std::stod(splittedLine[1]) * 15.0);
                 if(ra < raMIN) raMIN = ra;
                 if(ra > raMAX) raMAX = ra;
 
                 // DEC variable
-                if(splittedLine[8] == "") decNULLS++; else decNOTNULLS++;
-                dec = glm::radians(std::stod(splittedLine[8]));
+                if(splittedLine[2] == "") decNULLS++; else decNOTNULLS++;
+                dec = glm::radians(std::stod(splittedLine[2]));
                 if(dec < decMIN) decMIN = dec;
                 if(dec > decMAX) decMAX = dec;
 
                 // Distance variable
                 unknownDistance = true;
-                if(splittedLine[9] == "" || splittedLine[9] == "100000.0000") distNULLS++; else distNOTNULLS++;
-                if(splittedLine[9] == "100000.0000") {
+                if(splittedLine[3] == "" || splittedLine[3] == "100000.0000") distNULLS++; else distNOTNULLS++;
+                if(splittedLine[3] == "100000.0000") {
                     //dist = 2000.0f + glm::abs(glm::gaussRand(0.0f, 1000.0f));
                     dist = 65000.0f;
                 } else {
                     unknownDistance = false;
-                    dist = std::stod(splittedLine[9]);
+                    dist = std::stod(splittedLine[3]);
                     if(dist < distMIN) distMIN = dist;
                     if(dist > distMAX) distMAX = dist;
                 }
 
                 // Aparent Magnitude Variable
-                unknownMagnitude = true;
-                if(splittedLine[13] == "") {
-                    maNULLS++;
-                } else {
-                    maNOTNULLS++;
-                    unknownMagnitude = false;
-                }
-                ma = std::stod(splittedLine[13]);
-                if(ma < maMIN) maMIN = ma;
-                if(ma > maMAX) maMAX = ma;
+                //unknownMagnitude = true;
+                //if(splittedLine[7] == "") {
+                //    maNULLS++;
+                //} else {
+                //    maNOTNULLS++;
+                //    unknownMagnitude = false;
+                //}
+                //ma = std::stod(splittedLine[7]);
+                //if(ma < maMIN) maMIN = ma;
+                //if(ma > maMAX) maMAX = ma;
 
                 // Absolute Magnitude Variable
-                if(splittedLine[14] == "") absMaNULLS++; else absMaNOTNULLS++;
-                absMa = std::stod(splittedLine[14]);
+                if(splittedLine[7] == "") absMaNULLS++; else absMaNOTNULLS++;
+                absMa = std::stod(splittedLine[7]);
                 if(absMa < absMaMIN) absMaMIN = absMa;
                 if(absMa > absMaMAX) absMaMAX = absMa;
 
                 // Color variable
                 float colorIndex;
-                if(splittedLine[16] == "") colorNULLS++; else colorNOTNULLS++;
-                if(splittedLine[16] == "") {
+                if(splittedLine[8] == "") colorNULLS++; else colorNOTNULLS++;
+                if(splittedLine[8] == "") {
                     color = hexToRGB("0xffffff");
                     colorIndex = 0.4f;
                     color = getColor(colorIndex, colorIndexTable);
                 } else {
-                    colorIndex = std::stof(splittedLine[16]);
+                    colorIndex = std::stof(splittedLine[8]);
                     if(colorIndex < colorIndexMIN) colorIndexMIN = colorIndex;
                     if(colorIndex > colorIndexMAX) colorIndexMAX = colorIndex;
                     color = getColor(colorIndex, colorIndexTable);
 
                 }
 
-                // Proper motion ra dec radialVel
+                // Proper motion ra dec radialVel 10 11 12
                 float pmra, pmdec, rVel;
                 pmra = pmdec = rVel = 0.0f;
-                pmra = std::stof(splittedLine[10]);
-                pmdec = std::stof(splittedLine[11]);
-                rVel = std::stof(splittedLine[12]);
+
+                pmra = splittedLine[4] == "" ? 0.0 : std::stof(splittedLine[4]);
+                pmdec = splittedLine[5] == "" ? 0.0 : std::stof(splittedLine[5]);
+                rVel = splittedLine[6] == "" ? 0.0 : std::stof(splittedLine[6]);
 
                 // Add star
                 Star s = Star(ra,
