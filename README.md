@@ -313,6 +313,73 @@ This will generate the **ADDRESS** executable file, make sure that you execute i
 
 `./build/ADDRESS`
 
+# User manual
+
+In this section, we will explain the basic usage of the software and explore the different sections of the sidebar menu.
+
+## Catalogs, statistics and star names
+
+First, we have a **File** dropdown menu where you can open, save, or close datasets. When saving a dataset, it is saved with the current filter values applied. There is also an option to open the Gaia Archive website.
+
+![1](https://github.com/user-attachments/assets/668ab4a1-957b-42f3-b1d8-a398b47ea8e8)
+
+Next, we have a **Catalog** dropdown menu where you can view the current catalog being displayed and switch to any other catalog you have previously opened.
+
+We also have a **Show stats** button that displays the minimum, maximum, average, variance, and standard deviation of the main parameters in the current catalog.
+
+At the end of this section, we have the option to display star names from the default HYG catalog. This option has a significant impact on application performance and should only be used in **Centered on origin** camera mode.
+
+![2](https://github.com/user-attachments/assets/0a375ca1-0252-4232-9865-4867771a5cb6)
+
+## Self-adjusting lower distance filter
+
+The purpose of this option is to stabilize the FPS when dealing with large datasets, particularly when the camera is viewing many stars, resulting in a high number of stars on the screen.
+
+![3](https://github.com/user-attachments/assets/ed6508c6-c385-4ef6-9ac3-450fae039188)
+
+## Filters and FOV
+
+You can use the lower and upper sliders to filter by distance, absolute magnitude, color (B-V Index), and velocity, allowing you to customize the rendering dataset based on your criteria.
+
+There is also a button to reset the lower and upper sliders to their minimum and maximum values.
+
+![4](https://github.com/user-attachments/assets/35bf29d5-006a-46b2-bc57-8095c2561a6a)
+
+We also have the option to colorize with the selected filter. This will apply the specified color to the stars based on the three color selectors: the lower color corresponds to the lower filter value, the upper color corresponds to the upper filter value, and the middle color corresponds to the intermediate value between them.
+
+You can increase the influence of the middle color using the middle color factor slider. You can also reset the three color values to the default red, green, and blue. Additionally, you can reset the star colors to their natural color based on the B-V Index.
+
+![5](https://github.com/user-attachments/assets/826be60e-216c-4dc7-b0a0-45586b43af5a)
+
+Next, we have the FOV slider, which allows you to adjust the FOV to any value you desire, along with a button to reset it to its default value of 60. When the camera mode is centered on origin, the FOV can also be adjusted using the mouse wheel.
+
+![6](https://github.com/user-attachments/assets/acb508b3-dbaf-4abe-b137-d1e699530bde)
+
+## Render modes, fundamental plane, and camera modes
+
+In this section, we have the **Render mode** dropdown, which allows us to switch between a 3D space representation of the catalog, a 2D plot, or the HR diagram.
+
+The **Fundamental plane** dropdown allows us to switch between different fundamental planes: Equatorial, Ecliptic, Galactic, Galactocentric, and Horizon View.
+The Horizon View represents a fundamental plane based on our position on Earth, which can be specified using the longitude and latitude sliders. There is also a set of buttons to simulate the apparent movement of the stars due to Earth's rotation. Additionally, we have the option to activate different grids corresponding to the selected fundamental planes.
+
+Finally, we have the **Camera mode**, where we can switch between Centered on Origin, Free camera view, and Orbit. In Centered on origin mode, we can change our view direction by clicking and dragging with the left mouse button, and we can zoom in and out using the mouse wheel. In free camera view, we can move freely through space using the WASD keys, similar to a videogame. The mouse wheel allows us to adjust the velocity at which we are traveling. In Orbit mode, we orbit around the origin of coordinates or around a star. We can change our position by dragging with the left mouse button, and adjust our distance to the orbited point using the mouse wheel.
+
+![7](https://github.com/user-attachments/assets/7b5e0b59-adbd-4bc0-a8ea-54b99a6a2b82)
+
+At any moment, we can press F5 to reset the camera parameters, positioning it at the origin of coordinates and pointing toward the Orion constellation.
+
+## Stars movement
+
+For stars whose speed is known, we have the **Stars movement** option, which provides buttons to advance or rewind time, allowing us to observe the stars' movement over time. There is also an option to render the velocity vectors of these stars, along with a slider to adjust their visibility.
+
+![8](https://github.com/user-attachments/assets/c0e2d0c9-7c5e-42e4-ad30-b660b1e715da)
+
+## Customize visualization
+
+Finally, we can modify the visualization of the stars using three parameters: Size, Alpha, and Halo. For each of these parameters, we have three sliders to precisely adjust the star rendering. In most cases, we only need to use the Offset slider of the Alpha parameter, as it has the greatest effect on the visualization.
+
+![9](https://github.com/user-attachments/assets/2f342aca-4598-4d2b-b417-61b776bab136)
+
 # Downloading datasets from Gaia archive
 
 ![gaia](https://github.com/juanjo995/ADDRESS/assets/97818552/8a35cdc7-38a5-4448-9dfd-ec4bbd7ec368)
