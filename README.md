@@ -151,10 +151,11 @@ Just [download](https://github.com/juanjo995/ADDRESS/releases/tag/Windows_Execut
 
 First make sure that you have:
 
-* Microsoft Visual Studio
+* [Microsoft Visual Studio](https://visualstudio.microsoft.com/es/)
 * The CMake build system available from http://www.cmake.org
 
 Execute the next steps in a **Visual Studio Developer Command Prompt** window as **Administrator**. We recommend the **x64 Native Tools Command Prompt for VS**.
+To get this command prompt make sure that you select **Desktop Development with C++** during the installation of Microsoft Visual Studio
 
 ### Installing zlib
 
