@@ -345,4 +345,4 @@ Once the query is ready we can click on **Submit Query**, wait for the output an
 
 If you use this site without being registered the maximum number of stars in the output dataset is limited to 3 million, you'll need to create an account and log in to download larger datasets.
 
-By default **ADDRESS** comes with two datasets, the [HYG](https://github.com/astronexus/HYG-Database) database which contains the brightest stars and the common name of some of them, and a dataset with ~500000 stars where radial velocity is known.
+By default **ADDRESS** comes with one dataset, the [HYG](https://github.com/astronexus/HYG-Database) database which contains the brightest stars and the common name of some of them.
