@@ -370,7 +370,7 @@ In this section, we have the **Render mode** dropdown, which allows us to switch
 The **Fundamental plane** dropdown allows us to switch between different fundamental planes: Equatorial, Ecliptic, Galactic, Galactocentric, and Horizon View.
 The Horizon View represents a fundamental plane based on our position on Earth, which can be specified using the longitude and latitude sliders. There is also a set of buttons to simulate the apparent movement of the stars due to Earth's rotation. Additionally, we have the option to activate different grids corresponding to the selected fundamental planes.
 
-Finally, we have the **Camera mode**, where we can switch between Centered on origin, Free camera view, and Orbit. In Centered on origin mode, we can change our view direction by clicking and dragging with the left mouse button, and we can zoom in and out using the mouse wheel. In Free camera view, we can move freely through space using the WASD keys, similar to a videogame. The mouse wheel allows us to adjust the velocity at which we are traveling. In Orbit mode, we orbit around the origin of coordinates or around a star. We can change our position by dragging with the left mouse button, and adjust our distance to the orbited point using the mouse wheel.
+Finally, we have the **Camera mode** dropdown, where we can switch between Centered on origin, Free camera view, and Orbit. In Centered on origin mode, we can change our view direction by clicking and dragging with the left mouse button, and we can zoom in and out using the mouse wheel. In Free camera view, we can move freely through space using the WASD keys, similar to a videogame. The mouse wheel allows us to adjust the velocity at which we are traveling. In Orbit mode, we orbit around the origin of coordinates or around a star. We can change our position by dragging with the left mouse button, and adjust our distance to the orbited point using the mouse wheel.
 
 ![7](https://github.com/user-attachments/assets/7b5e0b59-adbd-4bc0-a8ea-54b99a6a2b82)
 
@@ -427,7 +427,7 @@ By default **ADDRESS** comes with one dataset, the [HYG](https://github.com/astr
 ## Some example queries
 
 ```sql
--- 10 million stars where absolute magnitude, color index and parallax are not null and parallax is positive
+-- 10 million stars where absolute magnitude, color index and parallax are not null and parallax is positive.
 SELECT TOP 10000000 gaia_source.ra,gaia_source.dec,gaia_source.parallax,gaia_source.pmra,gaia_source.pmdec,gaia_source.phot_g_mean_mag,gaia_source.bp_g,gaia_source.radial_velocity
 FROM gaiadr3.gaia_source
 WHERE gaia_source.parallax IS NOT NULL AND gaia_source.phot_g_mean_mag IS NOT NULL AND gaia_source.bp_g IS NOT NULL AND (gaiadr3.gaia_source.parallax>0.0)
