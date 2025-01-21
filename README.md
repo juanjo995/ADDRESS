@@ -331,6 +331,14 @@ At the end of this section, we have the option to display star names from the de
 
 ![2](https://github.com/user-attachments/assets/0a375ca1-0252-4232-9865-4867771a5cb6)
 
+## Loading datasets
+
+When loading a dataset, a window will appear allowing us to decide how to handle fields that may contain null values. By default, stars with null values will be discarded, but we can uncheck the checkbox to apply a default value instead.
+
+Additionally, there is a checkbox to determine how to calculate the 3D space velocity. By default, it will only be calculated when both radial velocity and proper motion values are known. Otherwise, the assigned velocity will be 0. However, we can uncheck the checkbox to calculate it using only proper motion or only radial velocity.
+
+![10](https://github.com/user-attachments/assets/ca1cda3e-eef5-4e4a-9097-8823346b51d5)
+
 ## Self-adjusting lower distance filter
 
 The purpose of this option is to stabilize the FPS when dealing with large datasets, particularly when the camera is viewing many stars, resulting in a high number of stars on the screen.
@@ -362,7 +370,7 @@ In this section, we have the **Render mode** dropdown, which allows us to switch
 The **Fundamental plane** dropdown allows us to switch between different fundamental planes: Equatorial, Ecliptic, Galactic, Galactocentric, and Horizon View.
 The Horizon View represents a fundamental plane based on our position on Earth, which can be specified using the longitude and latitude sliders. There is also a set of buttons to simulate the apparent movement of the stars due to Earth's rotation. Additionally, we have the option to activate different grids corresponding to the selected fundamental planes.
 
-Finally, we have the **Camera mode**, where we can switch between Centered on Origin, Free camera view, and Orbit. In Centered on origin mode, we can change our view direction by clicking and dragging with the left mouse button, and we can zoom in and out using the mouse wheel. In free camera view, we can move freely through space using the WASD keys, similar to a videogame. The mouse wheel allows us to adjust the velocity at which we are traveling. In Orbit mode, we orbit around the origin of coordinates or around a star. We can change our position by dragging with the left mouse button, and adjust our distance to the orbited point using the mouse wheel.
+Finally, we have the **Camera mode**, where we can switch between Centered on origin, Free camera view, and Orbit. In Centered on origin mode, we can change our view direction by clicking and dragging with the left mouse button, and we can zoom in and out using the mouse wheel. In Free camera view, we can move freely through space using the WASD keys, similar to a videogame. The mouse wheel allows us to adjust the velocity at which we are traveling. In Orbit mode, we orbit around the origin of coordinates or around a star. We can change our position by dragging with the left mouse button, and adjust our distance to the orbited point using the mouse wheel.
 
 ![7](https://github.com/user-attachments/assets/7b5e0b59-adbd-4bc0-a8ea-54b99a6a2b82)
 
