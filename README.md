@@ -418,6 +418,26 @@ The section **Advanced (ADQL)** shows us the specific query that was generated, 
 
 Once the query is ready we can click on **Submit Query**, wait for the output and download the result in **CSV** (plain text) or **FITS** (binary) format.
 
+We recommend downloading the catalogs in **FITS** format, as being a binary format, the file takes up significantly less space than a **CSV**.
+
 If you use this site without being registered the maximum number of stars in the output dataset is limited to 3 million. You will need to create an account and log in to download larger datasets.
 
 By default **ADDRESS** comes with one dataset, the [HYG](https://github.com/astronexus/HYG-Database) database which contains the brightest stars and the common name of some of them.
+
+## Some example queries
+
+```sql
+-- 10 million stars where absolute magnitude, color index and parallax are not null and parallax is positive
+SELECT TOP 10000000 gaia_source.ra,gaia_source.dec,gaia_source.parallax,gaia_source.pmra,gaia_source.pmdec,gaia_source.phot_g_mean_mag,gaia_source.bp_g,gaia_source.radial_velocity
+FROM gaiadr3.gaia_source
+WHERE gaia_source.parallax IS NOT NULL AND gaia_source.phot_g_mean_mag IS NOT NULL AND gaia_source.bp_g IS NOT NULL AND (gaiadr3.gaia_source.parallax>0.0)
+ORDER BY gaia_source.random_index
+```
+
+```sql
+-- 500 thousand stars where the velocity parameters are known, so we can calculate the 3D space velocity.
+SELECT TOP 500000 gaia_source.ra,gaia_source.dec,gaia_source.parallax,gaia_source.pmra,gaia_source.pmdec,gaia_source.phot_g_mean_mag,gaia_source.bp_g,gaia_source.radial_velocity
+FROM gaiadr3.gaia_source
+WHERE gaia_source.parallax IS NOT NULL AND gaia_source.phot_g_mean_mag IS NOT NULL AND gaia_source.bp_g IS NOT NULL AND (gaiadr3.gaia_source.parallax>0.0) AND gaia_source.pmra IS NOT NULL AND gaia_source.pmdec IS NOT NULL AND gaia_source.radial_velocity IS NOT NULL
+ORDER BY gaia_source.random_index
+```
