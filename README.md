@@ -434,6 +434,8 @@ WHERE gaia_source.parallax IS NOT NULL AND gaia_source.phot_g_mean_mag IS NOT NU
 ORDER BY gaia_source.random_index
 ```
 
+![10mill](https://github.com/user-attachments/assets/11043e71-2864-41c0-b331-a1d2f271a1d6)
+
 ```sql
 -- 500 thousand stars where the velocity parameters are known, so we can calculate the 3D space velocity.
 SELECT TOP 500000 gaia_source.ra,gaia_source.dec,gaia_source.parallax,gaia_source.pmra,gaia_source.pmdec,gaia_source.phot_g_mean_mag,gaia_source.bp_g,gaia_source.radial_velocity
@@ -441,3 +443,15 @@ FROM gaiadr3.gaia_source
 WHERE gaia_source.parallax IS NOT NULL AND gaia_source.phot_g_mean_mag IS NOT NULL AND gaia_source.bp_g IS NOT NULL AND (gaiadr3.gaia_source.parallax>0.0) AND gaia_source.pmra IS NOT NULL AND gaia_source.pmdec IS NOT NULL AND gaia_source.radial_velocity IS NOT NULL
 ORDER BY gaia_source.random_index
 ```
+
+![3D speed vectors](https://github.com/user-attachments/assets/dbc3c571-95b0-436d-82dc-b098621b5ea5)
+
+```sql
+-- We filter by color index greater than 1.5, so we only obtain the reddest stars.
+SELECT TOP 10000000 gaia_source.ra,gaia_source.dec,gaia_source.parallax,gaia_source.pmra,gaia_source.pmdec,gaia_source.phot_g_mean_mag,gaia_source.bp_g,gaia_source.radial_velocity
+FROM gaiadr3.gaia_source
+WHERE gaia_source.parallax IS NOT NULL AND gaia_source.phot_g_mean_mag IS NOT NULL AND gaia_source.bp_g IS NOT NULL AND (gaiadr3.gaia_source.parallax>0.0) AND (gaiadr3.gaia_source.bp_g>1.5)
+ORDER BY gaia_source.random_index
+```
+
+![reddest](https://github.com/user-attachments/assets/246d5a3f-05ef-420c-8cdf-38c2bc60883c)
