@@ -249,7 +249,7 @@ This shall generate the **ADDRESS.exe** file inside the `/build/Release` folder.
 
 ## Run on macOS
 
-Just [download](https://github.com/juanjo995/ADDRESS/releases/tag/MacOS_Executable) the **ADDRESS.zip**, unzip the file and run the executable **ADDRESS.app**. The operating system maybe detect that the software is not from a trusted source, in that case you have to go to **System Preferences** → **Security & Privacy** and find the button **Open Anyway**.
+Just [download](https://github.com/juanjo995/ADDRESS/releases/tag/macOS_Executable) the **ADDRESS.zip**, unzip the file and run the executable **ADDRESS.app**. The operating system maybe detect that the software is not from a trusted source, in that case you have to go to **System Preferences** → **Security & Privacy** and find the button **Open Anyway**.
 
 ## Build from source on macOS
 
